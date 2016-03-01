@@ -4,6 +4,7 @@
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
 using namespace std;
 using namespace cv;
 
@@ -12,7 +13,7 @@ struct makepath{
 		int y;
 }mkpath[200];
 
-Mat img1 = imread("/home/rishabh/Downloads/ps1.jpg",CV_LOAD_IMAGE_COLOR);
+Mat img1 = imread("ps1.jpg",CV_LOAD_IMAGE_COLOR);
 int sum1_x=0,sum1_y=0,count1=0,at_x,at_y; 
 
 void makeblue(float x1, float y1){
