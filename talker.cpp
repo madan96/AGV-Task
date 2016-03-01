@@ -14,7 +14,7 @@ struct makepath{
 		int y;
 	       }mkpath[200];
 
-Mat img1 = imread("/home/rishabh/Downloads/ps1.jpg",CV_LOAD_IMAGE_COLOR);
+Mat img1 = imread("ps1.jpg",CV_LOAD_IMAGE_COLOR);
 int r,c;
   int a[200][200];
 
@@ -54,7 +54,7 @@ int main(int argc, char **argv)
   long  int st_x,st_y; 
   int count1=0,count2=0;
   int i=0,j=0,k=0;
-  Mat img = imread("/home/rishabh/Downloads/ps1.jpg",CV_LOAD_IMAGE_COLOR);
+  Mat img = imread("ps1.jpg",CV_LOAD_IMAGE_COLOR);
   r = img.rows;
   c = img.cols;  
   for(i=0;i<200;i++)
