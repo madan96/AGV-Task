@@ -13,7 +13,7 @@ struct makepath{
 		int x;
 		int y;
 	       }mkpath[200];
-
+//Reading the problem statement images
 Mat img1 = imread("ps1.jpg",CV_LOAD_IMAGE_COLOR);
 int r,c;
   int a[200][200];
@@ -22,6 +22,7 @@ int r,c;
 int flag=0,m=0; 
   int end_x,end_y;
  
+ //Path plan function ...
 void planpath(int at_x,int at_y){
   visited[at_x][at_y]=true;
   int i=0,j=0;
@@ -54,6 +55,7 @@ int main(int argc, char **argv)
   long  int st_x,st_y; 
   int count1=0,count2=0;
   int i=0,j=0,k=0;
+  //Reading the image
   Mat img = imread("ps1.jpg",CV_LOAD_IMAGE_COLOR);
   r = img.rows;
   c = img.cols;  
@@ -96,7 +98,7 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::Publisher chatter_pub = n.advertise<geometry_msgs::Point>("chatter", 1000);
   ros::Rate loop_rate(10);
-
+  //Loop run for checking
   while (k<m)
   {
     geometry_msgs:: Point msg;
